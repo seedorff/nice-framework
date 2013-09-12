@@ -1,45 +1,77 @@
+/* Main stylesheet */
+@import 'css/reset.css';
+@import 'css/responsive.css';
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic');
+
+html { 
+	background: url('img/bg.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 body {
+	font-family: 'Lato', sans-serif;
+	color: #333;
+}
+/* Global stuff */
+img	{ }
+a { color: #000;}
+p { margin-bottom: 10px}
+.row:after { clear: both;}
 
-}
+/* Header stuff */
+.header a { text-decoration: none;}
 
-.column, .columns {
-	float: left;
-	padding: 0 0.3258123em;
-}
-
-.1 {
-	width: 8.33333%;
-}
-.2 {
-	width: 16.66667%;
-}
-.3 {
-	width: 25%;
-}
-.4 {
-	width: 33.33333%;
-}
-.5 {
-	width: 41.66667%;
-}
-.6 {
-	width: 50%;
-}
-.7 {
-	width: 58.33333%;
-}
-.8 {
-	width: 66.66667%;
-}
-.9 {
-	width: 75%;
-}
-.10 {
-	width: 83.33333%;
-}
-.11 {
-	width: 91.66667%;
-}
-.12 {
+.navigation {
+	background: #333;
+	border-radius: 5px;
 	width: 100%;
+	overflow: hidden;
+	background: rgb(205,235,142); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(205,235,142,1) 0%, rgba(165,201,86,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(205,235,142,1)), color-stop(100%,rgba(165,201,86,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 ); /* IE6-9 */
+}
+.navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.navigation ul li { float: left; padding: 10px 20px;}
+.navigation ul li a { text-decoration: none; font-weight: 200; } 
+.navigation ul li:hover { background-color: #677C35; color: #fff;}
+.navigation ul li a:hover { color: inherit;}
+
+/* Content stuff */
+.content { 
+	background-color: rgba(255,255,255,0.7);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 30px;
+	margin-top: 30px;
+}
+
+/* Sidebar stuff */
+.content:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* Footer stuff */
+footer {
+	clear: both;
+	min-height: 250px;
+	padding: 20px 0;
+	color: #fff;
+	
 }
